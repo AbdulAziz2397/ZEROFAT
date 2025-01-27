@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+}
+
+
+/* ........................ start navigation bar ........................... */
+.navbar {
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #C5DC6F;
+}
+
+.main-logo {
+    height: 100%;
+    margin-left: 80px;
+    display: flex;
+}
+
+.main-logo>a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-logo>a>img {
+    width: 220px;
+}
+
+.menu-part {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu>.menu-item>a {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.download-app {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.download-app>a {
+    color: black;
+    font-family: "Lato", serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px 22px;
+    border-radius: 15px;
+}
+
+.menu-item>a:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+.download-app>a:hover {
+    color: white;
+    transition: 0.3s;
+    border: 1px solid white;
+}
+
+.menuDropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: none;
+    text-align: right;
+}
+
+.fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menuDrop {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        height: 56px;
+        display: block;
+    }
+
+    .main-logo {
+        margin-left: 10px;
+    }
+
+    .main-logo>a>img {
+        width: 190px;
+    }
+
+    .menuDrop:checked~.menu-part {
+        transform: scaleY(100%);
+        transition: all 0.3s;
+    }
+
+    .menu-part {
+        width: 100%;
+        display: block;
+        transform: scaleY(0%);
+        transform-origin: top;
+        background-color: white;
+        height: auto;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
+    .menu-item>a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .download-app {
+        display: none;
+    }
+
+    .menuDropdown {
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 18px;
+    }
+
+}
+
+
+/* ........................ end navigation bar ........................... */
+
+
+
+/* ........................ start display .............................. */
+.display {
+    width: 100%;
+    height: 55vh;
+    background-color: #C5DC6F;
+    display: flex;
+}
+.display-text{
+    width: 600px;
+    margin-left: 75px;
+    margin-top: 25px;
+}
+
+.display-text>h1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 110px;
+    line-height: 110px;
+}
+.display-text>p {
+    font-weight: bolder;
+}
+
+.display-image-div-img {
+    width: 750px;
+    position: fixed;
+    justify-content: space-around;
+    right: -10%;
+    top: 100px;
+    animation: display-image 2s infinite;
+
+}
+
+@keyframes display-image {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .display-image{
+        display: none;
+    }
+}
+
+/* ........................ end display .............................. */
