@@ -6,6 +6,7 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: "Lato", serif;
+    /* border: 1px solid red; */
 }
 
 
@@ -50,12 +51,13 @@
     justify-content: space-between;
 }
 
-.menu>.menu-item>a {
+.menu-item>a {
     color: black;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
     margin-right: 30px;
+    object-fit: cover;
 }
 
 .download-app {
@@ -104,61 +106,6 @@
     display: none;
 }
 
-@media only screen and (max-width: 1024px) {
-    .navbar {
-        height: 56px;
-        display: block;
-    }
-
-    .main-logo {
-        margin-left: 10px;
-    }
-
-    .main-logo>a>img {
-        width: 190px;
-    }
-
-    .menuDrop:checked~.menu-part {
-        transform: scaleY(100%);
-        transition: all 0.3s;
-    }
-
-    .menu-part {
-        width: 100%;
-        display: block;
-        transform: scaleY(0%);
-        transform-origin: top;
-        background-color: white;
-        height: auto;
-    }
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu-item {
-        width: 100%;
-        padding: 8px 0px;
-    }
-
-    .menu-item>a {
-        width: 100%;
-        height: 100%;
-    }
-
-    .download-app {
-        display: none;
-    }
-
-    .menuDropdown {
-        display: block;
-        position: fixed;
-        right: 10px;
-        top: 18px;
-    }
-
-}
 
 
 /* ........................ end navigation bar ........................... */
@@ -172,10 +119,11 @@
     background-color: #C5DC6F;
     display: flex;
 }
-.display-text{
+
+.display-text {
     width: 600px;
     margin-left: 75px;
-    margin-top: 25px;
+    margin-top: 36px;
 }
 
 .display-text>h1 {
@@ -185,6 +133,7 @@
     font-size: 110px;
     line-height: 110px;
 }
+
 .display-text>p {
     font-weight: bolder;
 }
@@ -213,10 +162,88 @@
     }
 }
 
+
+/* ........................ end display .............................. */
+
+/* ............................. @medi queries .................. */
+
 @media only screen and (max-width: 1024px) {
-    .display-image{
+    .navbar {
+        height: 56px;
+        display: block;
+    }
+
+    .main-logo {
+        margin-left: 10px;
+    }
+
+    .main-logo>a>img {
+        width: 190px;
+    }
+
+    .menu-part {
+        width: 100%;
+        display: block;
+        transform: scaleY(0%);
+        transform-origin: top;
+        background-color: white;
+        height: auto;
+        transition: 0.3s ease-in-out;
+    }
+    .menuDrop:checked~.menu-part {
+        transform: scaleY(100%);
+    }
+
+    .barlable {
+        padding: 5px 7px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.089);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu>label{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .menu-item {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .menu-item>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 8px 0px;
+        cursor: pointer;
+    }
+
+    .download-app {
+        display: none;
+    }
+
+    .menuDropdown {
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 18px;
+    }
+
+    /* .......display...... */
+    .display-image {
         display: none;
     }
 }
 
-/* ........................ end display .............................. */
+@media only screen and (max-width: 768px)
+/* ............................. @medi queries .................. */
